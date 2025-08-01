@@ -1,7 +1,6 @@
 # isa-landing-page
 
 ## Project setup
-```
 1.	Instal paket Vue dengan `npm install -g @vue/cli` di terminal. Syarat khusus, harus memiliki Node.JS versi 8.9 atau versi terbaru. Pastikan versi Vue adalah versi @vue/cli 5.0.8, bisa dicek dengan menjalankan `vue –version` di terminal.
 2.	Jalankan `npm update -g @vue/cli` untuk memastikan memiliki dependency terupdate.
 3.	Buat proyek menggunakan `vue create (nama-proyek)`. Kemudian pilih `preset: Default ([Vue 3] babel, eslint)` dan tunggu hinggal instalasi selesai.
