@@ -1,0 +1,504 @@
+$header-bg-color: #FCF944
+$text-color1: #000000ff
+$white-bg-color: #ffffffff
+$blue-bg-color: #3E88FF
+$green-bg-color: #31BE32
+$pink-bg-color: #FF97D0
+$dark-shade: #fbfbfb66
+
+@mixin hover-move
+  &:hover
+    transform: translate(20px, -16px)
+
+@mixin hover-scale-down
+  &:hover
+    transform: scale(0.8)
+
+@mixin active-scale-normal
+  &:active
+    transform: scale(1)
+
+@mixin hover-move-right
+  &:hover
+    margin-left: 20px
+    
+
+*
+  margin: 0
+  padding: 0
+  transition: all 0.2s ease-out
+
+h1
+  color: $text-color1
+  margin: 30px 5px
+  font-weight: 900
+  @media (max-width: 1441px)
+          font-size: 4vw
+  @media (max-width: 1025px)
+          font-size: 4vw
+  @media (max-width: 768px)
+          font-size: 6vw
+  @media (max-width: 426px)
+          font-size: 9vw
+
+h2
+  margin: 20px 5px
+  font-weight: 600
+  @media (max-width: 1441px)
+          font-size: 3.5vw
+  @media (max-width: 1025px)
+          font-size: 3.5vw
+  @media (max-width: 768px)
+          font-size: 5vw
+  @media (max-width: 426px)
+          font-size: 8vw
+
+h3
+  margin: 10px 5px
+  font-weight: 600
+  @media (max-width: 1441px)
+          font-size: 2.5vw
+  @media (max-width: 1025px)
+          font-size: 2.5vw
+  @media (max-width: 768px)
+          font-size: 3vw
+  @media (max-width: 426px)
+          font-size: 6vw
+
+p
+  line-height: 1.5em
+  @media (max-width: 1441px)
+          font-size: 2.5vw
+  @media (max-width: 1025px)
+          font-size: 2.5vw
+  @media (max-width: 768px)
+          font-size: 4vw
+  @media (max-width: 426px)
+          font-size: 5vw
+
+#app
+  scroll-behavior: smooth
+  font-family: Avenir, Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  text-align: center
+  color: #2c3e50
+  margin-top: 60px
+  margin: 0
+  padding: 0
+  
+
+.normal-container
+  text-align: justify
+  h1
+    text-align: left
+  p
+    margin: 30px auto
+  @media (max-width: 1441px)
+    padding: 100px 100px
+  @media (max-width: 1025px)
+    padding: 100px 90px
+  @media (max-width: 768px)
+    padding: 80px 40px
+  @media (max-width: 426px)
+    padding: 20px 40px
+
+.header
+  position: relative
+  display: flex
+  background: $header-bg-color
+  color: $text-color1
+  height: 100vh
+  justify-content: center
+  align-items: center
+
+.donate-btn
+  position: fixed
+  background-color: transparent
+  top: 5%
+  right: 4%
+  padding: 6px 12px
+  z-index: 3
+  border: solid 3px
+  @include hover-move
+  @include active-scale-normal
+  @media (max-width: 1441px)
+          font-size: 2vw
+  @media (max-width: 1025px)
+          font-size: 3vw
+  @media (max-width: 768px)
+          font-size: 3vw
+  @media (max-width: 426px)
+          font-size: 4vw
+
+.donate-btn-bg
+  position: fixed
+  background: $white-bg-color
+  top: 5%
+  right: 4%
+  margin: 0
+  padding: 8px 14px
+  z-index: 2
+  @media (max-width: 1441px)
+          font-size: 2vw
+  @media (max-width: 1025px)
+          font-size: 3vw
+  @media (max-width: 768px)
+          font-size: 3vw
+  @media (max-width: 426px)
+          font-size: 4vw
+  div
+    opacity: 0
+
+.webflow-badge
+  z-index: 3
+  display: flex
+  position: fixed
+  background: $white-bg-color
+  right: 4%
+  bottom: 2%
+  padding: 8px 14px
+  justify-content: center
+  align-items: center
+  box-shadow: 0px 0px 4px -1px $text-color1
+  border-radius: 3px
+  img
+  @media (max-width: 1441px)
+          font-size: 3vw
+  @media (max-width: 1025px)
+          font-size: 3vw
+  @media (max-width: 768px)
+          font-size: 4vw
+  @media (max-width: 426px)
+          font-size: 5vw
+
+.header-parent-div
+  position: relative
+  display: grid
+  
+
+.header-second-div
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  img
+    width: 30vw
+    margin-right: 2vw
+    @media (max-width: 1441px)
+      width: 20vw
+    @media (max-width: 426px)
+      width: 30vw
+
+.header-title
+  text-align: left
+  h1
+    margin: 0
+    font-size: 7vw
+    font-weight: bold
+    @media (max-width: 1441px)
+      font-size: 4vw
+    @media (max-width: 426px)
+      font-size: 7vw
+
+.header-div-social
+  margin-top: 40px
+  div
+    display: flex
+    flex-direction: row
+    justify-content: space-evenly
+    a
+      margin-top: 20px
+      display: flex
+      img
+        @include hover-scale-down
+        @include active-scale-normal
+        @media (max-width: 1441px)
+          width: 4vw
+        @media (max-width: 1025px)
+          width: 4vw
+        @media (max-width: 768px)
+          width: 6vw
+        @media (max-width: 426px)
+          width: 10vw
+
+.section-1
+  div
+    margin-left: 10%
+    p
+      margin: 0px
+
+.section-1-quote
+  font-style: italic
+  border-left: solid 4px $pink-bg-color
+  padding-left: 10vw
+  background: $dark-shade
+
+.section-1-landing-video
+  margin: 5vh 10vw
+
+.section-2
+  a
+    text-decoration: none
+  background: $blue-bg-color
+  h1
+    color: $white-bg-color
+  h2
+    color: $white-bg-color
+  p
+    color: $white-bg-color
+
+.section-2-child-1
+  div
+    padding: 10px 30px
+    margin: 40px auto
+    border: solid 4px $white-bg-color 
+    @include hover-move
+    @include active-scale-normal
+
+.section-2-child-1:first-child
+  background: $text-color1
+
+.section-2-child-1:nth-child(2)
+  background: $green-bg-color
+
+.section-2-child-1:last-child
+  background: $pink-bg-color
+
+.section-3
+  background: $header-bg-color
+  a
+    display: flex
+    width: 100%
+    height: 100%
+    justify-content: center
+    text-align: center
+    align-items: center
+    text-decoration: none
+    border: solid 4px $text-color1
+    color: $text-color1
+    @include hover-move
+    @media (max-width: 1441px)
+          font-size: 1.5vw
+    @media (max-width: 1025px)
+          font-size: 1.5vw
+    @media (max-width: 768px)
+          font-size: 5vw
+    @media (max-width: 426px)
+          font-size: 6vw
+  
+
+.section-3-grid-container
+  display: grid
+  grid-template-columns: repeat(auto-fit, 300px)
+  gap: 35px
+  justify-content: center
+  div
+    display: flex
+    justify-content: center
+    align-items: center
+    background: $white-bg-color
+    @media (max-width: 1441px)
+          height: 15vw
+    @media (max-width: 1025px)
+          height: 15vw
+    @media (max-width: 768px)
+          height: 22vw
+    @media (max-width: 426px)
+          height: 33vw
+
+.toArrow
+  display: flex
+  flex-direction: row
+  align-items: center
+  margin: 60px 0
+  background: $pink-bg-color
+  width: 400px
+  padding: 10px
+  border: solid 3px $text-color1
+  p
+    margin: 0
+    margin-right: 20px
+
+  img
+    width: 10vw    
+    transform: rotate(180deg)
+    @include hover-move-right
+
+.section-4
+  img
+    filter: grayscale(100%)
+    display: flex
+    justify-content: center
+    align-items: center
+    background: $white-bg-color
+    @media (max-width: 1441px)
+          height: 12vw
+    @media (max-width: 1025px)
+          height: 12vw
+    @media (max-width: 768px)
+          height: 22vw
+    @media (max-width: 426px)
+          height: 33vw
+
+.section-4-card
+  display: flex
+  height: 100%
+  width: 100%
+  border: solid 3px $text-color1
+  padding: 20px 5px
+  @include hover-scale-down
+
+.section-4-grid-container
+  display: grid
+  grid-template-columns: repeat(auto-fit, 200px)
+  gap: 55px
+  justify-content: center
+  div
+    display: flex
+    flex-direction: column
+    align-items: center
+    background: $header-bg-color
+    text-align: center
+    @media (max-width: 1441px)
+          height: 30vw
+    @media (max-width: 1025px)
+          height: 30vw
+    @media (max-width: 768px)
+          height: 60vw
+    @media (max-width: 426px)
+          height: 90vw
+    p
+      @media (max-width: 1441px)
+            font-size: 1.5vw
+      @media (max-width: 1025px)
+            font-size: 1.5vw
+      @media (max-width: 768px)
+            font-size: 3vw
+      @media (max-width: 426px)
+            font-size: 5vw
+    h3
+      @media (max-width: 1441px)
+            font-size: 1.5vw
+      @media (max-width: 1025px)
+            font-size: 1.5vw
+      @media (max-width: 768px)
+            font-size: 3vw
+      @media (max-width: 426px)
+            font-size: 5vw
+
+.section-5
+  background: $pink-bg-color
+  img
+    filter: grayscale(100%)
+
+.section-5-card
+  display: flex
+  text-align: center
+  flex-direction: column
+  height: 100%
+  width: 100%
+  padding: 20px 5px
+
+.section-5-grid-container
+  display: grid
+  grid-template-columns: repeat(auto-fit, 200px)
+  gap: 55px
+  justify-content: center
+  div
+    div
+      margin-top: 20px
+      p
+        margin: 0
+        @media (max-width: 1441px)
+              font-size: 1.5vw
+        @media (max-width: 1025px)
+              font-size: 1.5vw
+        @media (max-width: 768px)
+              font-size: 3vw
+        @media (max-width: 426px)
+              font-size: 5vw
+      h3
+        @media (max-width: 1441px)
+              font-size: 1.5vw
+        @media (max-width: 1025px)
+              font-size: 1.5vw
+        @media (max-width: 768px)
+              font-size: 3vw
+        @media (max-width: 426px)
+              font-size: 5vw
+
+  
+.section-6
+  div
+    justify-content: center
+    align-items: center
+    div
+      img
+        max-width: 100%
+        height: auto
+        filter: grayscale(100%)
+        
+.section-6-grid-container
+  display: grid
+  grid-template-columns: repeat(auto-fit, 300px)
+  gap: 55px
+
+.section-6-card
+
+.footer
+  position: relative
+  background: $green-bg-color
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: repeat(2, 1fr)
+  gap: 20px
+  p
+    line-height: 0.6em
+    color: $text-color1
+  a
+    line-height: 0.6em
+    margin: 0
+    padding: 0
+    text-decoration: none
+    color: $text-color1
+    @media (max-width: 1441px)
+          font-size: 2.5vw
+    @media (max-width: 1025px)
+          font-size: 2.5vw
+    @media (max-width: 768px)
+          font-size: 4vw
+    @media (max-width: 426px)
+          font-size: 5vw
+    @include hover-scale-down
+
+  @media (max-width: 1441px)
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: 1fr
+
+  @media (max-width: 426px)
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(2, 1fr)
+  div
+    div
+      display: flex
+  div:first-child
+    div:last-child
+      margin-top: 4em
+      display: flex
+      flex-direction: row
+      justify-content: start
+      gap: 20px
+      a
+        display: flex
+        img
+          @include hover-scale-down
+          @include active-scale-normal
+          @media (max-width: 1441px)
+            width: 4vw
+          @media (max-width: 1025px)
+            width: 4vw
+          @media (max-width: 768px)
+            width: 6vw
+          @media (max-width: 426px)
+            width: 10vw
